@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — QuestHold AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #12100d;
+      --surface: #1b1813;
+      --text: #ece4d4;
+      --muted: #b5a98f;
+      --gold: #c5a059;
+      --rule: rgba(197, 160, 89, 0.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --ink: #f6f0e3; --surface: #efe6d2; --text: #2a2216; --muted: #5e5240; --gold: #8a6a22; --rule: rgba(138, 106, 34, 0.3); }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ink); color: var(--text); font: 18px/1.65 'Alegreya', Georgia, serif; }
+    header { border-bottom: 1px solid var(--rule); background: var(--surface); }
+    header .bar { max-width: 760px; margin: 0 auto; padding: 14px 16px; display: flex; gap: 18px; align-items: baseline; flex-wrap: wrap; }
+    header .brand { font-family: 'Cinzel', serif; font-weight: 700; color: var(--gold); text-decoration: none; letter-spacing: 0.04em; }
+    header nav a { color: var(--muted); margin-right: 14px; text-decoration: none; font-size: 16px; }
+    header nav a:hover { color: var(--gold); }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+    h1, h2, h3 { font-family: 'Cinzel', serif; color: var(--gold); line-height: 1.25; }
+    h1 { font-size: 1.7em; margin-top: 0.4em; }
+    h2 { font-size: 1.25em; margin-top: 1.8em; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+    h3 { font-size: 1.05em; }
+    a { color: var(--gold); }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 28px 0; }
+    code { background: var(--surface); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+    table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+    th, td { border: 1px solid var(--rule); padding: 6px 10px; text-align: left; vertical-align: top; }
+    footer { color: var(--muted); font-size: 15px; border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="{{ '/' | relative_url }}">QuestHold AI</a>
+      <nav>
+        <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
+        <a href="{{ '/terms.html' | relative_url }}">Terms</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+    <footer>QuestHold AI by Goodhope Technologies LLC. These documents also ship inside the app and read offline.</footer>
+  </main>
+</body>
+</html>
